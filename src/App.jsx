@@ -7,6 +7,7 @@ import "./App.css";
 // components
 import { RainbowLine } from "./components/RainbowLine/RainbowLine";
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -15,6 +16,22 @@ function App() {
     <>
       <RainbowLine />
       <Navbar />
+      <section id="spacer"></section>
+      <div className="ticks"></div>
+      <Hero />
+      <div className="ticks"></div>
+      <Hero />
+      <div className="ticks"></div>
+      <Hero />
+      <div className="ticks"></div>
+      <Hero />
+      <div className="ticks"></div>
+      <Hero />
+      <div className="ticks"></div>
+      <section id="spacer"></section>
+      {/* <section id="spacer"></section> */}
+      {/* <div className="ticks"></div> */}
+
       {/* <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />

@@ -55,6 +55,8 @@
     --heading: system-ui, "Segoe UI", Roboto, sans-serif;
     --mono: ui-monospace, Consolas, monospace;
 
+    --maxWidth: 1126px;
+
     font: 18px/145% var(--sans);
     letter-spacing: 0.18px;
     color-scheme: light dark;
@@ -72,12 +74,12 @@
 
     ::-moz-selection {
       background: var(--accent);
-      color: var(--text);
+      /* color: var(--text); */
     }
 
     ::selection {
       background: var(--accent);
-      color: var(--text);
+      /* color: var(--text); */
     }
 
     :focus-visible {
@@ -111,7 +113,7 @@
   }
 
   #root {
-    width: 1126px;
+    width: var(--maxWidth);
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -245,8 +247,8 @@
 
   a {
     color: var(--color-accent);
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
+    /* -webkit-text-decoration: underline; */
+    /* text-decoration: underline; */
     text-underline-offset: 0.2em;
   }
 
