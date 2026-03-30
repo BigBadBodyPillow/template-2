@@ -8,6 +8,7 @@ import "./App.css";
 import { RainbowLine } from "./components/RainbowLine/RainbowLine";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import Showcase from "./components/Showcase/Showcase";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -18,18 +19,14 @@ function App() {
       <Navbar />
       <section id="spacer"></section>
       <div className="ticks"></div>
+      {/* <section className=" bg-taupe-700 ">
+      </section> */}
       <Hero />
-      <div className="ticks"></div>
-      <Hero />
-      <div className="ticks"></div>
-      <Hero />
-      <div className="ticks"></div>
-      <Hero />
-      <div className="ticks"></div>
-      <Hero />
+
+      <Showcase />
+      {/* <section id="spacer"></section> */}
       <div className="ticks"></div>
       <section id="spacer"></section>
-      {/* <section id="spacer"></section> */}
       {/* <div className="ticks"></div> */}
 
       {/* <section id="center">

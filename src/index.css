@@ -1,12 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 @import "tailwindcss";
 
 @layer reset,base,typography;
+
+@theme {
+  --breakpoint-xxs: 280px;
+  --breakpoint-xs: 350px;
+  --breakpoint-normal: 1124px;
+}
 
 @layer reset {
   *,
   *::after,
   *::before {
     box-sizing: border-box;
+    /* overflow: hidden; */
     /* margin: 0; */
     /* padding: 0; */
   }
@@ -31,6 +39,9 @@
     --accent-bg: rgba(170, 59, 255, 0.1);
     --accent-border: rgba(170, 59, 255, 0.5);
     --social-bg: rgba(244, 243, 236, 0.5);
+    --button-bg: #aa3bff;
+    --button-bg-hover: #b85efc;
+    --button-bg-active: #c374ff;
     --shadow:
       rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     --space-xs: 0.25rem;
@@ -51,13 +62,13 @@
     --ts-xxl: clamp(1.9775rem, calc(9cqw + 0.35rem), 2.5269rem);
     --ts-xxxl: clamp(2.4719rem, calc(12cqw + 0.35rem), 3.1586rem);
 
-    --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-    --heading: system-ui, "Segoe UI", Roboto, sans-serif;
-    --mono: ui-monospace, Consolas, monospace;
+    --sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+    --heading: "Space Grotesk", system-ui, "Segoe UI", Roboto, sans-serif;
+    --mono: "Space Grotesk", ui-monospace, Consolas, monospace;
 
     --maxWidth: 1126px;
 
-    font: 18px/145% var(--sans);
+    font: 14px/145% var(--sans);
     letter-spacing: 0.18px;
     color-scheme: light dark;
     color: var(--text);
@@ -68,18 +79,20 @@
     -moz-osx-font-smoothing: grayscale;
     scrollbar-color: var(--accent) transparent;
 
-    @media (max-width: 1024px) {
+    /* @media (max-width: 1024px) {
       font-size: 16px;
-    }
+    } */
 
     ::-moz-selection {
       background: var(--accent);
       /* color: var(--text); */
+      color: var(--text-h);
     }
 
     ::selection {
       background: var(--accent);
       /* color: var(--text); */
+      color: var(--text-h);
     }
 
     :focus-visible {
@@ -99,6 +112,9 @@
       --accent-bg: rgba(192, 132, 252, 0.15);
       --accent-border: rgba(192, 132, 252, 0.5);
       --social-bg: rgba(47, 48, 58, 0.5);
+      --button-bg: #c084fc;
+      --button-bg-hover: rgb(193, 115, 252);
+      --button-bg-active: rgb(204, 138, 254);
       --shadow:
         rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
     }
@@ -147,9 +163,10 @@
     font-family: var(--heading);
     font-weight: 500;
     color: var(--text-h);
+    line-height: normal;
   }
 
-  h1 {
+  /* h1 {
     font-size: 56px;
     letter-spacing: -1.68px;
     margin: 32px 0;
@@ -157,8 +174,8 @@
       font-size: 36px;
       margin: 20px 0;
     }
-  }
-  h2 {
+  } */
+  /* h2 {
     font-size: 24px;
     line-height: 118%;
     letter-spacing: -0.24px;
@@ -166,7 +183,7 @@
     @media (max-width: 1024px) {
       font-size: 20px;
     }
-  }
+  } */
   p {
     margin: 0;
   }
@@ -246,7 +263,7 @@
   }
 
   a {
-    color: var(--color-accent);
+    /* color: var(--color-accent); */
     /* -webkit-text-decoration: underline; */
     /* text-decoration: underline; */
     text-underline-offset: 0.2em;
