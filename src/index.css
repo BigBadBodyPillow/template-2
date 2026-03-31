@@ -35,13 +35,13 @@
     --bg: #fff;
     --border: #e5e4e7;
     --code-bg: #f4f3ec;
-    --accent: #aa3bff;
-    --accent-bg: rgba(170, 59, 255, 0.1);
-    --accent-border: rgba(170, 59, 255, 0.5);
+    --accent: #ff5111;
+    --accent-bg: rgba(255, 81, 17, 0.1);
+    --accent-border: rgba(255, 81, 17, 0.5);
     --social-bg: rgba(244, 243, 236, 0.5);
-    --button-bg: #aa3bff;
-    --button-bg-hover: #b85efc;
-    --button-bg-active: #c374ff;
+    --button-bg: #ff8153;
+    --button-bg-hover: #ff9a76;
+    --button-bg-active: #ffb89f;
     --shadow:
       rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     --space-xs: 0.25rem;
@@ -84,13 +84,14 @@
     } */
 
     ::-moz-selection {
-      background: var(--accent);
+      background: hsl(from var(--accent) h s l / 0.8);
       /* color: var(--text); */
       color: var(--text-h);
     }
 
     ::selection {
-      background: var(--accent);
+      /* background: var(--accent); */
+      background: hsl(from var(--accent) h s l / 0.8);
       /* color: var(--text); */
       color: var(--text-h);
     }
@@ -105,16 +106,17 @@
     :root {
       --text: #9ca3af;
       --text-h: #f3f4f6;
-      --bg: #161a1d;
-      --border: #2e303a;
+      --bg: #1d1816;
+      /* --bg: #161a1d; */
+      --border: #3a332e;
       --code-bg: #1f2028;
-      --accent: #c084fc;
-      --accent-bg: rgba(192, 132, 252, 0.15);
-      --accent-border: rgba(192, 132, 252, 0.5);
+      --accent: #fe713e;
+      --accent-bg: rgba(254, 113, 62, 0.15);
+      --accent-border: rgba(254, 113, 62, 0.5);
       --social-bg: rgba(47, 48, 58, 0.5);
-      --button-bg: #c084fc;
-      --button-bg-hover: rgb(193, 115, 252);
-      --button-bg-active: rgb(204, 138, 254);
+      --button-bg: #ff9670;
+      --button-bg-hover: #ffb397;
+      --button-bg-active: #ffc9b5;
       --shadow:
         rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
     }

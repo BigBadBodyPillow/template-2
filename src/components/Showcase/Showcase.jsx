@@ -8,7 +8,7 @@ export default function Showcase() {
       <section className="relative overflow-x-clip ">
         {/* border-0 border-b border-(--border) */}
         {/* <div className="-z-1  h-60 w-full absolute -top-10 mask-linear-from-black blur-sm"></div> */}
-        <h2 className="text-4xl mb-4">Lorem ipsum dolor sit</h2>
+        <h2 className="text-5xl mb-4">Lorem ipsum dolor sit</h2>
         <div className="cards grid  normal:grid-cols-4 max-xl:grid-cols-2 max-md:grid-cols-1 justify-between items-center gap-5">
           <a
             href="#"

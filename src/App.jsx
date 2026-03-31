@@ -9,6 +9,8 @@ import { RainbowLine } from "./components/RainbowLine/RainbowLine";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Showcase from "./components/Showcase/Showcase";
+import Comparison from "./components/Comparison/Comparison";
+import DemoImages from "./components/DemoImages/DemoImages";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -19,15 +21,15 @@ function App() {
       <Navbar />
       <section id="spacer"></section>
       <div className="ticks"></div>
-      {/* <section className=" bg-taupe-700 ">
-      </section> */}
+      {/* bg-taupe-600 */}
       <Hero />
-
       <Showcase />
-      {/* <section id="spacer"></section> */}
+      <div className="ticks"></div>
+      <Comparison />
+      <div className="ticks"></div>
+      <DemoImages />
       <div className="ticks"></div>
       <section id="spacer"></section>
-      {/* <div className="ticks"></div> */}
 
       {/* <section id="center">
         <div className="hero">

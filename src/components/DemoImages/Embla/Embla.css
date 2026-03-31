@@ -1,0 +1,173 @@
+.embla {
+  /* max-width: 48rem; */
+  margin: auto;
+
+  --slide-height: auto;
+  --slide-spacing: 1rem;
+  --slide-size: 70%;
+
+  --text-high-contrast-rgb-value: 230, 230, 230;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  align-items: center;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  cursor: grab;
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide:active {
+  cursor: grabbing;
+}
+
+.embla__slide__number {
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  max-height: 600px;
+  user-select: none;
+}
+
+.embla__controls {
+  max-width: var(--slide-size);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  margin-inline: auto;
+}
+
+.embla__buttons {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0.2rem solid var(--border);
+  width: 3.6rem;
+  height: 3.6rem;
+
+  z-index: 1;
+  /* border-radius: 50%; */
+  color: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+}
+
+.embla__button--disabled {
+  color: var(--text-h);
+}
+
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 50%; */
+  position: relative;
+}
+
+.embla__dot:before,
+.embla__dot:after {
+  width: 1.4rem;
+  /* height: 1.4rem; */
+  height: 0.6rem;
+
+  /* border-radius: 50%; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  content: "";
+}
+
+.embla__dot:before {
+  background-color: var(--border);
+  border: 0.2rem solid var(--border);
+}
+
+.embla__dot:after {
+  background-color: var(--accent);
+  border: 0.2rem solid var(--accent);
+  opacity: 0;
+}
+
+.embla__dot--selected:after {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: light) {
+  .embla__button {
+    border: 0.2rem solid var(--text-h);
+    color: var(--text-h);
+  }
+}
+
+@media (max-width: 450px) {
+  .embla__controls {
+    padding-inline: 20px;
+    max-width: unset;
+  }
+}
+@media (max-width: 380px) {
+  .embla__controls {
+    padding-inline: 0;
+    /* max-width: unset; */
+  }
+}
