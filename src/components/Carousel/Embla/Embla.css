@@ -165,9 +165,8 @@
     max-width: unset;
   }
 }
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .embla__controls {
     padding-inline: 0;
-    /* max-width: unset; */
   }
-}
+} */

@@ -13,10 +13,10 @@ import pexelsGiovanniCalia11409263791796 from "../../assets/carousel/pexels-giov
 import pexelsVisualkamikaze10244894 from "../../assets/carousel/pexels-visualkamikaze-10244894.jpg";
 
 const SLIDES = [
-  <img src={pexelsJessikaarraes12499064} />,
-  <img src={pexelsOlegGamulinskii75506028771043} />,
-  <img src={pexelsGiovanniCalia11409263791796} />,
-  <img src={pexelsVisualkamikaze10244894} />,
+  <img src={pexelsJessikaarraes12499064} loading="lazy" />,
+  <img src={pexelsOlegGamulinskii75506028771043} loading="lazy" />,
+  <img src={pexelsGiovanniCalia11409263791796} loading="lazy" />,
+  <img src={pexelsVisualkamikaze10244894} loading="lazy" />,
 ];
 
 export default function DemoImages() {
