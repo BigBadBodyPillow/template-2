@@ -19,7 +19,7 @@ const SLIDES = [
   <img src={pexelsVisualkamikaze10244894} loading="lazy" />,
 ];
 
-export default function DemoImages() {
+export default function Carousel() {
   return (
     <>
       <section className="border-0 border-t border-(--border)">

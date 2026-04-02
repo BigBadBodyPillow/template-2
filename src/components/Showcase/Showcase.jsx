@@ -75,59 +75,59 @@ export default function Showcase() {
         <div className="links flex flex-wrap justify-center md:justify-between gap-2 my-5 px-11 text-xl">
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center gap-2"
+            className="text-(--accent) flex items-center justify-center gap-2 hover:underline group"
           >
             Lorem
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             ipsum
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             dolor
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             sit
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             amet
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             consectetur
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             adipisicing
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
           <a
             href="#"
-            className="text-(--accent) flex items-center justify-center  gap-2"
+            className="text-(--accent) flex items-center justify-center  gap-2 hover:underline group"
           >
             elit
-            <Arrow />
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
           </a>
         </div>
       </section>

@@ -7,7 +7,7 @@ import "./App.css";
 // components
 import { RainbowLine } from "./components/RainbowLine/RainbowLine";
 import Showcase from "./components/Showcase/Showcase";
-import DemoImages from "./components/Carousel/Carousel";
+import Carousel from "./components/Carousel/Carousel";
 // assets
 import GraphLight from "./assets/graph_Light.svg?react";
 import Graph from "./assets/graph.svg?react";
@@ -16,6 +16,7 @@ import ManFixWebPage from "./assets/ManFixWebPage.svg?react";
 import ManFixWebPageLight from "./assets/ManFixWebPageLight.svg?react";
 import ManKeyHole from "./assets/ManKeyHole.svg?react";
 import ManKeyHoleLight from "./assets/ManKeyHoleLight.svg?react";
+import Arrow from "./assets/arrow-narrow-right-dashed.svg?react";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,7 +24,6 @@ function App() {
   return (
     <>
       <RainbowLine />
-
       {/* Navbar */}
       <section className="fixed w-full max-w-[calc(var(--maxWidth)-2px)] z-10">
         <div className="nav-blur w-full h-5 max-sm:h-0 backdrop-blur-md"></div>
@@ -50,15 +50,13 @@ function App() {
           <div className="search">search</div>
         </nav>
       </section>
-
       <section id="spacer"></section>
       <div className="ticks"></div>
       {/* bg-taupe-600 */}
-
       {/* Hero  */}
       <section className="hero border-0 border-t border-(--border) flex justify-between py-5 px-10 max-sm:px-5 max-xs:px-2 relative overflow-x-clip">
-        <div className="info w-125 text-left">
-          <h1 className="text-6xl my-8">Lorem, ipsum dolor.</h1>
+        <div className="info w-125 text-left max-sm:text-center max-sm:w-full max-sm:flex-col max-sm:flex max-sm:items-center">
+          <h1 className="text-6xl my-8">Lorem, ipsum dolor</h1>
           <h2 className="text-2xl text-pretty">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
             laboriosam perferendis, asperiores beatae a praesentium iure labore
@@ -82,15 +80,13 @@ function App() {
           draggable={false}
         ></img>
       </section>
-
       <Showcase />
       <div className="ticks"></div>
-
       {/* comparison */}
-      <section className="border-0 border-t border-(--border) flex items-center ">
+      <section className="border-0 border-t border-(--border) flex items-center max-md:py-5 max-md:flex-col">
         <div className="info px-10 max-w-125 text-left ">
           <h3 className="text-4xl mb-4 text-pretty text-(--text-h) ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
           </h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
@@ -99,7 +95,7 @@ function App() {
           </p>
         </div>
         <GraphLight
-          className="dark:hidden block font-(family-name:--mono)"
+          className="dark:hidden block font-(family-name:--mono) "
           loading="lazy"
           alt="a graph showing fake data"
         />
@@ -110,10 +106,14 @@ function App() {
         />
       </section>
       <div className="ticks"></div>
-      <DemoImages />
+
+      {/* carousel */}
+      <Carousel />
+
       <div className="ticks"></div>
 
-      <section className="border-0 border-t border-(--border) flex max-sm:flex-col">
+      {/* other section that i dont know what to call */}
+      <section className="border-0 border-t border-(--border) flex max-sm:flex-col py-10">
         <div className="flex-1 px-10 py-5 flex flex-col  items-center">
           <ManFixWebPage
             className="dark:block hidden font-(family-name:--mono) max-h-50 max-w-50"
@@ -126,7 +126,7 @@ function App() {
             alt="a graph showing fake data"
           />
           <h3 className="text-4xl mb-4 text-pretty text-(--text-h) text-left w-full">
-            Lorem ipsum dolor sit.
+            Lorem ipsum dolor sit
           </h3>
           <p className="text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
@@ -146,7 +146,7 @@ function App() {
             alt="a graph showing fake data"
           />
           <h3 className="text-4xl mb-4 text-pretty text-(--text-h) text-left w-full">
-            Lorem ipsum dolor sit.
+            Lorem ipsum dolor sit
           </h3>
           <p className="text-left">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, ut
@@ -156,113 +156,222 @@ function App() {
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
 
-      {/* <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      {/* new section */}
+      <section className="border-0 border-t border-(--border) text-left py-20 bg-taupe-700  text-white flex flex-col gap-20 ">
+        <div className="flex max-md:flex-col max-md:gap-5">
+          <div className="flex-1 px-10">
+            <h3 className="text-4xl mb-4 text-pretty w-full">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, animi
+            </h3>
+          </div>
+          <div className="flex-1 flex flex-col px-10">
+            <p className="text-xl ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              repellat at saepe ipsum molestias tempora nisi, veritatis
+              consequatur voluptates voluptate fuga?
+            </p>
+            <a
+              href="#"
+              className="bg-(--accent) text-black hover:bg-(--button-bg-hover) active:bg-(--button-bg-active) font-(family-name:--mono) font-semibold h-10 px-5 w-fit flex items-center justify-center text-2xl cursor-pointer mt-5"
+            >
+              Lorem, ipsum dolor
+            </a>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
+        <div className="flex gap-5 px-10 max-md:flex-col max-md:gap-10 ">
+          <div className="flex-1 flex flex-col justify-between ">
+            <p className="text-2xl">Lorem</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              iure, quas delectus quo quam voluptatem nisi suscipit consequatur
+              obcaecati molestiae. Assumenda quam animi dolorem eveniet natus
+              iusto dolores repellat.
+            </p>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-5 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <p className="text-2xl">Lorem</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vel
+              iure nisi architecto amet ut. Iusto eius et saepe consequatur
+              impedit assumenda vero! Ullam minima illum, dolorum numquam quo
+              eos repudiandae. Mollitia illo dolorem iste, magni reprehenderit
+              nobis.
+            </p>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-5 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <p className="text-2xl">Lorem</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              similique, quisquam ea dolorum illum fugiat hic distinctio dolorem
+              atque officiis odio iste, ut animi iure dicta quaerat!
+            </p>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-5 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div className="ticks"></div>
+
+      {/* section2 */}
+      <section className="border-0 border-t border-(--border) flex flex-col gap-5 py-10">
+        <div className="py-5 px-10">
+          <h3 className="text-4xl mb-4 text-pretty text-(--text-h) w-full">
+            Lorem ipsum dolor sit
+          </h3>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, ut
+            vel! Saepe consequatur tenetur ipsa veniam quibusdam quaerat?
           </p>
         </div>
-        <button
-          className="counter cursor-pointer"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        <div className="flex gap-5 px-10 max-md:flex-col max-md:gap-10 text-left pb-10">
+          <div className="flex-1 flex flex-col justify-between ">
+            <div>
+              <p className="text-2xl">Lorem</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                iure, quas delectus quo quam voluptatem nisi suscipit
+                consequatur obcaecati molestiae. Assumenda quam animi dolorem
+                eveniet natus iusto dolores repellat.
+              </p>
+            </div>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-2 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <div>
+              <p className="text-2xl">Lorem</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                vel iure nisi architecto amet ut. Iusto eius et saepe
+                consequatur impedit assumenda vero! Ullam minima illum, dolorum
+                numquam quo eos repudiandae. Mollitia illo dolorem iste, magni
+                reprehenderit nobis.
+              </p>
+            </div>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-2 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <div>
+              <p className="text-2xl">Lorem</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam similique, quisquam ea dolorum illum fugiat hic
+                distinctio dolorem atque officiis odio iste, ut animi iure dicta
+                quaerat!
+              </p>
+            </div>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-2 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <div>
+              <p className="text-2xl">Lorem</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
+                laborum at quod laboriosam dolore minus facere consectetur
+                quaerat iste assumenda similique adipisci ea libero nisi ipsum
+                reprehenderit, doloribus, asperiores magnam?
+              </p>
+            </div>
+            <a
+              href="#"
+              className="text-(--accent) flex items-center justify-start gap-2 mt-2 hover:underline group"
+            >
+              Lorem
+              <Arrow className="group-hover:translate-x-1 transition duration-200" />
+            </a>
+          </div>
         </div>
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section> */}
+
+      {/* new section 3 */}
+      <section className="border-0 border-t border-(--border) text-left py-20 bg-taupe-700  text-white flex flex-col gap-20 ">
+        <div className="flex max-md:flex-col max-md:gap-5">
+          <div className="flex-1 px-10">
+            <h3 className="text-4xl mb-4 text-pretty w-full">
+              Lorem ipsum dolor{" "}
+              <span className="bg-linear-to-r from-orange-500 to-pink-400  bg-clip-text text-transparent">
+                sit amet consectetur{" "}
+              </span>
+              adipisicing elit
+            </h3>
+          </div>
+          <div className="flex-1 flex flex-col px-10">
+            <p className="text-xl ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem
+              accusantium dolorem omnis impedit voluptatibus. Veniam, rem optio.
+            </p>
+            <a
+              href="#"
+              className="bg-(--accent) text-black hover:bg-(--button-bg-hover) active:bg-(--button-bg-active) font-(family-name:--mono) font-semibold h-10 px-5 w-fit flex items-center justify-center text-2xl cursor-pointer mt-5"
+            >
+              Lorem, ipsum
+            </a>
+          </div>
+        </div>
+        <div className="flex gap-5 px-10 text-center">
+          <div className="flex-1 flex flex-col ">
+            <p className="text-4xl font-bold bg-linear-to-r from-orange-500 to-pink-400  bg-clip-text text-transparent">
+              Lorem
+            </p>
+            <p className="underline">Lorem, ipsum dolor</p>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <p className="text-4xl font-bold bg-linear-to-r from-orange-500 to-pink-400  bg-clip-text text-transparent">
+              Lorem
+            </p>
+            <p className="underline">Lorem, ipsum dolor</p>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <p className="text-4xl font-bold bg-linear-to-r/oklch from-orange-500 to-pink-400 bg-clip-text text-transparent">
+              Lorem
+            </p>
+            <p className="underline">Lorem, ipsum dolor</p>
+          </div>
+        </div>
+      </section>
+      <div className="ticks"></div>
+      <section id="spacer"></section>
     </>
   );
 }
