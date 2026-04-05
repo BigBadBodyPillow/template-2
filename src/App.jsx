@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "./assets/vite.svg";
 // import heroImg from "./assets/hero.png";
@@ -38,7 +38,39 @@ import GitHubLight from "./assets/GitHub_light.svg?react";
 import Linkedin from "./assets/linkedin.svg?react";
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
   // const [count, setCount] = useState(0);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const modal = document.getElementById("modal");
+
+  // close when clicking out of modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape" && modalOpen) {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [modalOpen]);
 
   return (
     <>
@@ -66,12 +98,85 @@ function App() {
               4444
             </a>
           </div>
-          <div className="search">search</div>
+          <button className="search cursor-pointer" onClick={toggleModal}>
+            search
+          </button>
         </nav>
       </section>
+      {/* search modal */}
+      <div
+        id="modal"
+        className={`${
+          modalOpen ? `block` : `hidden`
+        }  fixed z-10 w-full h-full bg-[rgba(0,0,0,0.4)] backdrop-blur-md top-0 left-0  text-left `}
+      >
+        <div className="w-full max-w-[calc(var(--maxWidth)-2px)] mx-auto my-[8%] max-md:my-[15%] px-5 flex flex-col gap-2">
+          <button
+            tabIndex={1}
+            className="close w-fit text-white ml-auto cursor-pointer  px-5 py-2.5"
+            onClick={closeModal}
+          >
+            close
+          </button>
+          <label htmlFor="search" className="text-white">
+            Type to search
+          </label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search..."
+            className="w-full text-xl text-black bg-white dark:bg-black dark:text-white px-5 py-5 min-w-0"
+            autoFocus
+          />
+          {/* results */}
+          <div className="w-full h-100 px-5 py-5 flex flex-col gap-5">
+            <p className="text-white">Search Results</p>
+            <div className="result bg-[rgb(244,244,244)] text-black dark:bg-black dark:text-white h-15 flex items-center px-5 py-2.5 gap-5">
+              <Dotnet className="max-w-full w-auto h-10" />
+              <div className="flex-1 flex  flex-col">
+                <p className="text-lg">Lorem, ipsum dolor.</p>
+                <p className="h-6 overflow-hidden text-ellipsis text-pretty text-(--text)">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ratione minima consectetur libero ipsam. Totam omnis
+                  architecto molestias veniam repellendus soluta cumque maiores
+                  mollitia?
+                </p>
+              </div>
+            </div>
+            <div className="result bg-[rgb(244,244,244)] text-black dark:bg-black dark:text-white h-15 flex items-center px-5 py-2.5 gap-5">
+              <Dotnet className="max-w-full w-auto h-10" />
+              <div className="flex-1 flex  flex-col">
+                <p className="text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+                <p className="h-6 overflow-hidden text-ellipsis text-pretty text-(--text)">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati atque dolor nihil temporibus aliquam doloribus in
+                  distinctio corporis dolores culpa facere iure cupiditate fuga
+                  itaque deleniti modi ex quos.
+                </p>
+              </div>
+            </div>
+            <div className="result bg-[rgb(244,244,244)]  text-black  dark:bg-black dark:text-white h-15 flex items-center px-5 py-2.5 gap-5">
+              <Dotnet className="max-w-full w-auto h-10" />
+              <div className="flex-1 flex  flex-col">
+                <p className="text-lg">Lorem ipsum dolor sit.</p>
+                <p className="h-6 overflow-hidden text-ellipsis text-pretty text-(--text)">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  maxime magni animi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section id="spacer"></section>
+
       <div className="ticks"></div>
       {/* bg-taupe-600 */}
+
       {/* Hero  */}
       <section className="hero border-0 border-t border-(--border) flex justify-between py-5 px-10 max-sm:px-5 max-xs:px-2 relative overflow-x-clip">
         <div className="info w-125 text-left max-sm:text-center max-sm:w-full max-sm:flex-col max-sm:flex max-sm:items-center">
@@ -125,12 +230,9 @@ function App() {
         />
       </section>
       <div className="ticks"></div>
-
       {/* carousel */}
       <Carousel />
-
       <div className="ticks"></div>
-
       {/* other section that i dont know what to call */}
       <section className="border-0 border-t border-(--border) flex max-sm:flex-col py-10">
         <div className="flex-1 px-10 py-5 flex flex-col  items-center">
@@ -173,9 +275,7 @@ function App() {
           </p>
         </div>
       </section>
-
       <div className="ticks"></div>
-
       {/* new section */}
       <section className="border-0 border-t border-(--border) text-left py-20 bg-taupe-700  text-white flex flex-col gap-20 ">
         <div className="flex max-md:flex-col max-md:gap-5">
@@ -250,9 +350,7 @@ function App() {
           </div>
         </div>
       </section>
-
       <div className="ticks"></div>
-
       {/* section2 */}
       <section className="border-0 border-t border-(--border) flex flex-col gap-5 py-10">
         <div className="py-5 px-10">
@@ -340,9 +438,7 @@ function App() {
           </div>
         </div>
       </section>
-
       <div className="ticks"></div>
-
       {/* new section 3 */}
       <section className="border-0 border-t border-(--border) text-left py-20 bg-taupe-700  text-white flex flex-col gap-20 ">
         <div className="flex max-md:flex-col max-md:gap-5">
@@ -389,9 +485,7 @@ function App() {
           </div>
         </div>
       </section>
-
       <div className="ticks"></div>
-
       <section className="border-0 border-t border-(--border) flex max-md:flex-col text-left gap-5 px-10 py-10">
         <div className="flex-1 overflow-x-clip flex flex-col justify-center gap-2.5 relative">
           <div className="absolute left-0 w-25 h-full z-1 bg-linear-to-r dark:from-taupe-900 from-white to-transparent"></div>
@@ -454,11 +548,9 @@ function App() {
           </a>
         </div>
       </section>
-
       <div className="ticks"></div>
       <section id="spacer"></section>
       <div className="ticks"></div>
-
       <section className="border-0 border-t border-(--border) bg-(--accent) flex max-md:flex-col text-left gap-5 px-10 py-20 ">
         <h2 className="flex-1 text-5xl  text-(--text-h) flex items-center">
           Lorem ipsum dolor sit.
@@ -472,11 +564,8 @@ function App() {
           </a>
         </div>
       </section>
-
       <div className="ticks"></div>
-
       <section id="spacer" className="h-80!"></section>
-
       <footer className="flex flex-col gap-5 px-10 py-5 items-center">
         <div className="socials flex gap-5 items-center">
           <p className="flex justify-center font-bold text-2xl text-(--text-h)">
