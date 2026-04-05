@@ -8,7 +8,9 @@ import "./App.css";
 import { RainbowLine } from "./components/RainbowLine/RainbowLine";
 import Showcase from "./components/Showcase/Showcase";
 import Carousel from "./components/Carousel/Carousel";
+
 // assets
+//general
 import GraphLight from "./assets/graph_Light.svg?react";
 import Graph from "./assets/graph.svg?react";
 import catJump from "./assets/1096117405106839572 (1).png";
@@ -17,6 +19,23 @@ import ManFixWebPageLight from "./assets/ManFixWebPageLight.svg?react";
 import ManKeyHole from "./assets/ManKeyHole.svg?react";
 import ManKeyHoleLight from "./assets/ManKeyHoleLight.svg?react";
 import Arrow from "./assets/arrow-narrow-right-dashed.svg?react";
+
+// parters
+import Dotnet from "./assets/dotnet.svg?react";
+import PolarsLogo from "./assets/polars-logo.svg?react";
+import Steam from "./assets/steam.svg?react";
+import SoundCloud from "./assets/SoundCloud_wordmark_light.svg?react";
+import Uber from "./assets/Uber_light.svg?react";
+import Voicemod from "./assets/Voicemod_light.svg?react";
+import Ibm from "./assets/ibm.svg?react";
+
+//socials
+import Youtube from "./assets/youtube.svg?react";
+import X from "./assets/X (formerly Twitter)_dark.svg?react";
+import XLight from "./assets/X (formerly Twitter)_light.svg?react";
+import GitHub from "./assets/GitHub_dark.svg?react";
+import GitHubLight from "./assets/GitHub_light.svg?react";
+import Linkedin from "./assets/linkedin.svg?react";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -57,11 +76,11 @@ function App() {
       <section className="hero border-0 border-t border-(--border) flex justify-between py-5 px-10 max-sm:px-5 max-xs:px-2 relative overflow-x-clip">
         <div className="info w-125 text-left max-sm:text-center max-sm:w-full max-sm:flex-col max-sm:flex max-sm:items-center">
           <h1 className="text-6xl my-8">Lorem, ipsum dolor</h1>
-          <h2 className="text-2xl text-pretty">
+          <p className="text-2xl text-pretty">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
             laboriosam perferendis, asperiores beatae a praesentium iure labore
             facilis!
-          </h2>
+          </p>
           <div className="button-group grid grid-cols-2 grid-rows-2 max-xxs:grid-cols-1 max-xxs:grid-rows-3  w-fit gap-2 my-15">
             <a className="bg-(--button-bg) text-(--bg) hover:bg-(--button-bg-hover) active:bg-(--button-bg-active) font-(family-name:--mono) font-semibold h-10 w-35  max-xxs:w-full flex items-center justify-center text-2xl cursor-pointer">
               Lorem
@@ -370,8 +389,132 @@ function App() {
           </div>
         </div>
       </section>
+
+      <div className="ticks"></div>
+
+      <section className="border-0 border-t border-(--border) flex max-md:flex-col text-left gap-5 px-10 py-10">
+        <div className="flex-1 overflow-x-clip flex flex-col justify-center gap-2.5 relative">
+          <div className="absolute left-0 w-25 h-full z-1 bg-linear-to-r dark:from-taupe-900 from-white to-transparent"></div>
+          <div className="absolute right-0 w-25 h-full z-1 bg-linear-to-l dark:from-taupe-900 from-white to-transparenttaupe-900"></div>
+          {/* row1 */}
+          <div className="flex flex-nowrap mb-3 justify-between gap-5 -translate-x-22 ">
+            <div className="basis-auto shrink-0 grow-0  bg-white p-5">
+              <SoundCloud
+                alt="soundcloud logo"
+                className="max-w-full w-auto h-10"
+              />
+            </div>
+            <div className="basis-auto shrink-0 grow-0   bg-white p-5">
+              <Dotnet alt="dot net logo" className="max-w-full w-auto h-10" />
+            </div>
+            <div className="basis-auto shrink-0 grow-0  bg-white p-5">
+              <PolarsLogo
+                alt="PolarsLogo logo"
+                className="max-w-full w-auto h-10"
+              />
+            </div>
+            <div className="basis-auto shrink-0 grow-0  bg-white p-5">
+              <Steam alt="Steam logo" className="max-w-full w-auto h-10 " />
+            </div>
+          </div>
+          {/* row2 */}
+          <div className="flex  flex-nowrap mb-3 justify-between gap-5 -translate-x-5">
+            <div className="basis-auto shrink-0 grow-0  bg-white p-5">
+              <Uber alt="Uber logo" className="max-w-full w-auto h-10" />
+            </div>
+            <div className="basis-auto shrink-0 grow-0   bg-white p-5">
+              <Ibm alt="Ibm logo" className="max-w-full w-auto h-10" />
+            </div>
+            <div className="basis-auto shrink-0 grow-0  bg-white p-5">
+              <Voicemod
+                alt="Voicemod logo"
+                className="max-w-full w-auto h-10"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-4xl mb-4 text-pretty text-(--text-h) w-full">
+            Lorem ipsum dolor sit
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            laborum blanditiis voluptas fugiat, culpa cum quas rerum beatae
+            expedita exercitationem nemo esse reprehenderit. Blanditiis
+            consequuntur iusto odit dolore vero ducimus quos repudiandae hic
+            iure nemo corrupti perferendis quasi esse aut, perspiciatis porro ex
+            voluptatum. Aperiam qui accusantium iusto!
+          </p>
+          <a
+            href="#"
+            className="text-(--accent) flex items-center justify-start gap-2 mt-2 hover:underline group"
+          >
+            Lorem, ipsum dolor
+            <Arrow className="group-hover:translate-x-1 transition duration-200" />
+          </a>
+        </div>
+      </section>
+
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <div className="ticks"></div>
+
+      <section className="border-0 border-t border-(--border) bg-(--accent) flex max-md:flex-col text-left gap-5 px-10 py-20 ">
+        <h2 className="flex-1 text-5xl  text-(--text-h) flex items-center">
+          Lorem ipsum dolor sit.
+        </h2>
+        <div className="flex flex-col flex-1 gap-5">
+          <p className="text-xl text-(--text-h)">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </p>
+          <a className="bg-white text-(--accent) hover:bg-(--button-bg-hover) active:bg-(--button-bg-active) font-(family-name:--mono) font-semibold h-10 w-35  max-xxs:w-full flex items-center justify-center text-2xl cursor-pointer">
+            Lorem
+          </a>
+        </div>
+      </section>
+
+      <div className="ticks"></div>
+
+      <section id="spacer" className="h-80!"></section>
+
+      <footer className="flex flex-col gap-5 px-10 py-5 items-center">
+        <div className="socials flex gap-5 items-center">
+          <p className="flex justify-center font-bold text-2xl text-(--text-h)">
+            Follow us
+          </p>
+          <a href="#" alt="X (Formery Twitter)">
+            <XLight className="w-8 h-auto block dark:hidden " />
+            <X className="w-8  h-auto hidden dark:block " />
+          </a>
+          <a href="#" alt="GitHub">
+            <GitHubLight className="w-9 h-auto block dark:hidden" />
+            <GitHub className="w-9  h-auto hidden dark:block " />
+          </a>
+          <a href="#" alt="Linkedin">
+            <Linkedin className="w-8 h-auto" />
+          </a>
+          <a href="#" alt="Youtube">
+            <Youtube className="w-10 h-auto" />
+          </a>
+        </div>
+        <div className="flex w-full gap-5 justify-center flex-wrap">
+          <a href="#" className="hover:underline">
+            Contact
+          </a>
+          <a href="#" className="hover:underline">
+            Support
+          </a>
+          <a href="#" className="hover:underline">
+            Privacy & Cookies
+          </a>
+          <a href="#" className="hover:underline">
+            Terms
+          </a>
+          <a href="#" className="hover:underline">
+            Trademarks
+          </a>
+        </div>
+      </footer>
     </>
   );
 }

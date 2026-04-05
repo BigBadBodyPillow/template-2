@@ -15,6 +15,7 @@ Inspired by microsofts [.NET](https://dotnet.microsoft.com/en-us/)
 <!-- - [svgbox](https://svgbox.net/iconsets/) -->
 
 - [tabler](https://tabler.io/icons) - icon svgs
+- [svgl](https://svgl.app/) - Logo svgs
   <!-- - [svgrepo](https://www.svgrepo.com/) -->
     <!-- - [background](https://heropatterns.com/) -->
 - [Chart Generator](https://copyicon.com/) - chart
