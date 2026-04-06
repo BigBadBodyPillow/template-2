@@ -496,33 +496,52 @@ function App() {
               <SoundCloud
                 alt="soundcloud logo"
                 className="max-w-full w-auto h-10"
+                loading="lazy"
               />
             </div>
             <div className="basis-auto shrink-0 grow-0   bg-white p-5">
-              <Dotnet alt="dot net logo" className="max-w-full w-auto h-10" />
+              <Dotnet
+                alt="dot net logo"
+                className="max-w-full w-auto h-10"
+                loading="lazy"
+              />
             </div>
             <div className="basis-auto shrink-0 grow-0  bg-white p-5">
               <PolarsLogo
                 alt="PolarsLogo logo"
                 className="max-w-full w-auto h-10"
+                loading="lazy"
               />
             </div>
             <div className="basis-auto shrink-0 grow-0  bg-white p-5">
-              <Steam alt="Steam logo" className="max-w-full w-auto h-10 " />
+              <Steam
+                alt="Steam logo"
+                className="max-w-full w-auto h-10 "
+                loading="lazy"
+              />
             </div>
           </div>
           {/* row2 */}
           <div className="flex  flex-nowrap mb-3 justify-between gap-5 -translate-x-5">
             <div className="basis-auto shrink-0 grow-0  bg-white p-5">
-              <Uber alt="Uber logo" className="max-w-full w-auto h-10" />
+              <Uber
+                alt="Uber logo"
+                className="max-w-full w-auto h-10"
+                loading="lazy"
+              />
             </div>
             <div className="basis-auto shrink-0 grow-0   bg-white p-5">
-              <Ibm alt="Ibm logo" className="max-w-full w-auto h-10" />
+              <Ibm
+                alt="Ibm logo"
+                className="max-w-full w-auto h-10"
+                loading="lazy"
+              />
             </div>
             <div className="basis-auto shrink-0 grow-0  bg-white p-5">
               <Voicemod
                 alt="Voicemod logo"
                 className="max-w-full w-auto h-10"
+                loading="lazy"
               />
             </div>
           </div>
@@ -572,18 +591,21 @@ function App() {
             Follow us
           </p>
           <a href="#" alt="X (Formery Twitter)">
-            <XLight className="w-8 h-auto block dark:hidden " />
-            <X className="w-8  h-auto hidden dark:block " />
+            <XLight className="w-8 h-auto block dark:hidden " loading="lazy" />
+            <X className="w-8  h-auto hidden dark:block " loading="lazy" />
           </a>
           <a href="#" alt="GitHub">
-            <GitHubLight className="w-9 h-auto block dark:hidden" />
-            <GitHub className="w-9  h-auto hidden dark:block " />
+            <GitHubLight
+              className="w-9 h-auto block dark:hidden"
+              loading="lazy"
+            />
+            <GitHub className="w-9  h-auto hidden dark:block " loading="lazy" />
           </a>
           <a href="#" alt="Linkedin">
-            <Linkedin className="w-8 h-auto" />
+            <Linkedin className="w-8 h-auto" loading="lazy" />
           </a>
           <a href="#" alt="Youtube">
-            <Youtube className="w-10 h-auto" />
+            <Youtube className="w-10 h-auto" loading="lazy" />
           </a>
         </div>
         <div className="flex w-full gap-5 justify-center flex-wrap">
