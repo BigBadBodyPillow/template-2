@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "./assets/vite.svg";
 // import heroImg from "./assets/hero.png";
@@ -39,6 +39,7 @@ import Linkedin from "./assets/linkedin.svg?react";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
+  const modal = useRef();
   // const [count, setCount] = useState(0);
 
   const toggleModal = () => {
@@ -48,11 +49,9 @@ function App() {
     setModalOpen(false);
   };
 
-  const modal = document.getElementById("modal");
-
   // close when clicking out of modal
   window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal.current) {
       closeModal();
     }
   };
@@ -104,8 +103,10 @@ function App() {
         </nav>
       </section>
       {/* search modal */}
-      <div
-        id="modal"
+      <dialog
+        ref={modal}
+        aria-modal="true"
+        aria-label="Search dialog"
         className={`${
           modalOpen ? `block` : `hidden`
         }  fixed z-10 w-full h-full bg-[rgba(0,0,0,0.4)] backdrop-blur-md top-0 left-0  text-left `}
@@ -125,6 +126,7 @@ function App() {
             type="text"
             id="search"
             name="search"
+            aria-label="Search"
             placeholder="Search..."
             className="w-full text-xl text-black bg-white dark:bg-black dark:text-white px-5 py-5 min-w-0"
             autoFocus
@@ -170,7 +172,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </dialog>
 
       <section id="spacer"></section>
 
