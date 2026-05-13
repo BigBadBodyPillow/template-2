@@ -14,9 +14,6 @@
   *::after,
   *::before {
     box-sizing: border-box;
-    /* overflow: hidden; */
-    /* margin: 0; */
-    /* padding: 0; */
   }
 
   html {
@@ -79,20 +76,13 @@
     -moz-osx-font-smoothing: grayscale;
     scrollbar-color: var(--accent) transparent;
 
-    /* @media (max-width: 1024px) {
-      font-size: 16px;
-    } */
-
     ::-moz-selection {
       background: hsl(from var(--accent) h s l / 0.8);
-      /* color: var(--text); */
       color: var(--text-h);
     }
 
     ::selection {
-      /* background: var(--accent); */
       background: hsl(from var(--accent) h s l / 0.8);
-      /* color: var(--text); */
       color: var(--text-h);
     }
 
@@ -168,84 +158,9 @@
     line-height: normal;
   }
 
-  /* h1 {
-    font-size: 56px;
-    letter-spacing: -1.68px;
-    margin: 32px 0;
-    @media (max-width: 1024px) {
-      font-size: 36px;
-      margin: 20px 0;
-    }
-  } */
-  /* h2 {
-    font-size: 24px;
-    line-height: 118%;
-    letter-spacing: -0.24px;
-    margin: 0 0 8px;
-    @media (max-width: 1024px) {
-      font-size: 20px;
-    }
-  } */
   p {
     margin: 0;
   }
-
-  /* :is(h1, h2, h3, h4, h5, h6) {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: var(--line-tight);
-    text-wrap: balance;
-  }
-
-  h1 {
-    font-size: var(--ts-xxxl);
-    letter-spacing: -0.03em;
-    margin-block-end: var(--space-lg);
-  }
-
-  h2 {
-    font-size: var(--ts-xxl);
-    letter-spacing: -0.025em;
-  }
-
-  h2,
-  h3 {
-    margin-block-end: var(--space-md);
-  }
-
-  h3 {
-    font-size: var(--ts-xl);
-  }
-
-  h4 {
-    font-size: var(--ts-lg);
-  }
-
-  h4,
-  h5 {
-    margin-block-end: var(--space-sm);
-  }
-
-  h5 {
-    font-size: var(--ts-md);
-  }
-
-  h6 {
-    font-size: var(--ts-base);
-    margin-block-end: var(--space-sm);
-  }
-
-  :is(p, li, dd) {
-    hyphens: auto;
-    line-height: var(--line-loose);
-    max-inline-size: 88ch;
-    text-wrap: pretty;
-    word-wrap: break-word;
-  }
-
-  :is(ul, ol) {
-    padding-inline-start: var(--space-lg);
-  } */
 
   ul {
     list-style-type: disc;
@@ -255,19 +170,11 @@
     list-style-type: decimal;
   }
 
-  /* :is(ul, ol):has(> li > :is(ul, ol)),
-  li {
-    margin-block-start: var(--space-xs);
-  } */
-
   li::marker {
     color: var(--color-accent);
   }
 
   a {
-    /* color: var(--color-accent); */
-    /* -webkit-text-decoration: underline; */
-    /* text-decoration: underline; */
     text-underline-offset: 0.2em;
   }
 

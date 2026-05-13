@@ -1,7 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "./assets/vite.svg";
-// import heroImg from "./assets/hero.png";
 import "./App.css";
 
 // components
@@ -40,7 +37,6 @@ import Linkedin from "./assets/linkedin.svg?react";
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const modal = useRef();
-  // const [count, setCount] = useState(0);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
